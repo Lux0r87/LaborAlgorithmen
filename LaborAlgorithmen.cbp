@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="LaborAlgorithmen" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/LaborAlgorithmen" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O3" />
+					<Add option="-std=c++14" />
+					<Add option="-Wall" />
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/LaborAlgorithmen" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O3" />
+					<Add option="-std=c++14" />
+					<Add option="-Wall" />
+				</Compiler>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="BasicTest.h" />
+		<Unit filename="InsertionSort.h" />
+		<Unit filename="InsertionSort_v1.h" />
+		<Unit filename="InsertionSort_v2.h" />
+		<Unit filename="InsertionSort_v3.h" />
+		<Unit filename="TestInsertionSort.h" />
+		<Unit filename="Timer.h" />
+		<Unit filename="main.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
