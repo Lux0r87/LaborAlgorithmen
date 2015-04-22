@@ -107,10 +107,6 @@ public:
         }
     }
 
-    /*~BasicTest() {
-        delete testArray;
-    }*/
-
     template <typename T, size_t n>
     void print(array<T, n> &arrayReference) {
         for(size_t i = 0; i < n; i++) {

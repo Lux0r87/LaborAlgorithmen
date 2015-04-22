@@ -37,12 +37,10 @@ int main() {
 
     #if INSERTION_SORT_TEST
         unique_ptr<TestInsertionSort> testInsertionSort = make_unique <TestInsertionSort>();
-        //TestInsertionSort* testInsertionSort = new TestInsertionSort();
         freopen("InsertionSort.txt", "w", stdout);
         testInsertionSort->measureTime_InsertionSort<InsertionSort_v1>(startSize, maxSteps, runs);
         testInsertionSort->measureTime_InsertionSort<InsertionSort_v2>(startSize, maxSteps, runs);
         testInsertionSort->measureTime_InsertionSort<InsertionSort_v3>(startSize, maxSteps, runs);
-        //delete testInsertionSort;
     #endif // INSERTION_SORT_TEST
 
     return 0;
