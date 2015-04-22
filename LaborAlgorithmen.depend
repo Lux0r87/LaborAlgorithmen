@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1429669557 source:d:\dev\github\laboralgorithmen\main.cpp
+1429669310 source:d:\dev\github\laboralgorithmen\main.cpp
 	<iostream>
 	<array>
 	<chrono>
@@ -17,17 +17,17 @@
 	"BasicTest.h"
 	"TestInsertionSort.h"
 
-1429669131 d:\dev\github\laboralgorithmen\insertionsort.h
+1429634188 d:\dev\github\laboralgorithmen\insertionsort.h
 
-1429669131 d:\dev\github\laboralgorithmen\insertionsort_v1.h
+1429634082 d:\dev\github\laboralgorithmen\insertionsort_v1.h
 
-1429669131 d:\dev\github\laboralgorithmen\insertionsort_v2.h
+1429636733 d:\dev\github\laboralgorithmen\insertionsort_v2.h
 
-1429669131 d:\dev\github\laboralgorithmen\insertionsort_v3.h
+1429637181 d:\dev\github\laboralgorithmen\insertionsort_v3.h
 
-1429669131 d:\dev\github\laboralgorithmen\timer.h
+1429555242 d:\dev\github\laboralgorithmen\timer.h
 
-1429669557 d:\dev\github\laboralgorithmen\basictest.h
+1429673056 d:\dev\github\laboralgorithmen\basictest.h
 
-1429670459 d:\dev\github\laboralgorithmen\testinsertionsort.h
+1429673181 d:\dev\github\laboralgorithmen\testinsertionsort.h
 

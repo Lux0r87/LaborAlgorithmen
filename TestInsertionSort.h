@@ -19,7 +19,7 @@ public:
         cout << setiosflags(ios::fixed) << setprecision(DOUBLE_PRECISION) << left;
         cout << setw(8) << "steps: " << steps << endl;
         cout << setw(8) << "runs: " << runs << endl << endl;
-        cout << setw(15) << "elements" << "| " << setw(15) << "random" << "| " << setw(15) << "ascending" << "| " << setw(15) << "descending" << endl;
+        cout << setw(15) << "elements" << "| " << setw(15) << "ascending" << "| " << setw(15) << "descending" << "| " << setw(15) << "random" << endl;
         cout << "-------------------------------------------------------------" << endl;
 
         for(size_t step = 1; step <= steps; step++) {

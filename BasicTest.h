@@ -170,13 +170,13 @@ public:
     void init(unsigned int mode, size_t sizeOfArray) {
         switch(mode) {
             case 0:
-                randomDouble(*testArray, sizeOfArray);
-                break;
-            case 1:
                 ascendingDouble(*testArray, sizeOfArray);
                 break;
-            case 2:
+            case 1:
                 descendingDouble(*testArray, sizeOfArray);
+                break;
+            case 2:
+                randomDouble(*testArray, sizeOfArray);
                 break;
         }
     }
