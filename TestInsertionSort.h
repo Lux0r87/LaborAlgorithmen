@@ -58,7 +58,6 @@ public:
         }
 
         cout << endl << endl << endl;
-        //delete insertionSort;
     }
 
 };
