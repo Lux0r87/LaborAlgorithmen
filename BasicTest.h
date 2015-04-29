@@ -27,6 +27,7 @@ private:
 
     // INTEGER:
     // uniform distribution
+    //array<int, 10> exampleArray { {9, 5, 3, 1, 6, 4, 0, 8, 2, 7} };
     array<int, 20> exampleArray { {1, 9, 3, 2, 6, 4, 6, 8, 5, 3, 6, 8, 5, 6, 9, 2, 1, 7, 0, 4} };
     // left shifted
     //array<int, 20> exampleArray { {4, 7, 1, 0, 5, 0, 1, 0, 0, 1, 4, 2, 0, 0, 2, 2, 2, 2, 5, 3} };

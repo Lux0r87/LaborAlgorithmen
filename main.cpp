@@ -28,6 +28,7 @@ int main() {
     size_t runs = 1;
 
     #if BASIC_TEST
+        //freopen("BasicTest.txt", "w", stdout);
         BasicTest basicTest;
         basicTest.run();
     #endif // BASIC_TEST
