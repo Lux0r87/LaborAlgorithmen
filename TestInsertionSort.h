@@ -7,7 +7,7 @@ class TestInsertionSort: public BasicTest {
 
 public:
     template<class T>
-    void measureTime_InsertionSort(size_t startSize, size_t maxSteps, size_t runs) {
+    void measureTime(size_t startSize, size_t maxSteps, size_t runs) {
         unique_ptr<T> insertionSort = make_unique <T>();
 
         clearCache();
