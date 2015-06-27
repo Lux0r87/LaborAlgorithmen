@@ -40,7 +40,7 @@ protected:
             T t = a[i];
 
             // Search a smaller value than t. Start at the current position and iterates from right to left.
-            for (size_t j = i; a[j - 1] > t && j > left; j--) {
+            for (size_t j = i; a[j - 1] > t; j--) {
                 a[j] = a[j - 1];
                 a[j - 1] = t;
             }
