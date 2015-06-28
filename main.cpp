@@ -12,13 +12,16 @@
 #include "InsertionSort_v1.h"
 #include "InsertionSort_v2.h"
 #include "InsertionSort_v3.h"
+#include "Merger.h"
+#include "Mergesort_BU.h"
 #include "Timer.h"
 
 #include "BasicTest.h"
-#include "TestInsertionSort.h"
+#include "TestSortAlgorithm.h"
 
 #define BASIC_TEST 1
-#define INSERTION_SORT_TEST 1
+#define INSERTION_SORT_TEST 0
+#define MERGESORT_TEST 0
 
 using namespace std;
 
@@ -28,21 +31,31 @@ int main() {
     size_t runs = 1;
 
     #if BASIC_TEST
-        //freopen("BasicTest.txt", "w", stdout);
+        freopen("BasicTest.txt", "w", stdout);
         BasicTest basicTest;
         basicTest.run();
     #endif // BASIC_TEST
 
-    maxSteps = 9;
-    startSize = 500;
-
     #if INSERTION_SORT_TEST
-        unique_ptr<TestInsertionSort> testInsertionSort = make_unique <TestInsertionSort>();
+        maxSteps = 8;
+        startSize = 500;
+
+        unique_ptr<TestSortAlgorithm> testInsertionSort = make_unique <TestSortAlgorithm>();
         freopen("InsertionSort.txt", "w", stdout);
         testInsertionSort->measureTime<InsertionSort_v1>(startSize, maxSteps, runs);
         testInsertionSort->measureTime<InsertionSort_v2>(startSize, maxSteps, runs);
         testInsertionSort->measureTime<InsertionSort_v3>(startSize, maxSteps, runs);
     #endif // INSERTION_SORT_TEST
+
+    #if MERGESORT_TEST
+        maxSteps = 6;
+        startSize = 500;
+
+        unique_ptr<TestSortAlgorithm> testMergesort = make_unique <TestSortAlgorithm>();
+        freopen("Mergesort.txt", "w", stdout);
+        testMergesort->measureTime<Mergesort_BU>(startSize, maxSteps, runs);
+        //testMergesort->measureTime<InsertionSort_v2>(startSize, maxSteps, runs);
+    #endif // MERGESORT_TEST
 
     return 0;
 }

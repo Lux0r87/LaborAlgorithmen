@@ -40,7 +40,9 @@
 		<Unit filename="InsertionSort_v1.h" />
 		<Unit filename="InsertionSort_v2.h" />
 		<Unit filename="InsertionSort_v3.h" />
-		<Unit filename="TestInsertionSort.h" />
+		<Unit filename="Merger.h" />
+		<Unit filename="Mergesort_BU.h" />
+		<Unit filename="TestSortAlgorithm.h" />
 		<Unit filename="Timer.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>

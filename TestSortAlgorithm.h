@@ -1,22 +1,21 @@
-#ifndef TESTINSERTIONSORT_H
-#define TESTINSERTIONSORT_H
+#ifndef TESTSORTALGORITHM_H
+#define TESTSORTALGORITHM_H
 
 using namespace std;
 
-class TestInsertionSort: public BasicTest {
+class TestSortAlgorithm: public BasicTest {
 
 public:
     template<class T>
     void measureTime(size_t startSize, size_t maxSteps, size_t runs) {
-        unique_ptr<T> insertionSort = make_unique <T>();
+        unique_ptr<T> sortAlgorithm = make_unique <T>();
 
         clearCache();
         size_t sizeOfArray = startSize;
         size_t steps = calculateSteps(startSize, maxSteps);
 
-        cout << "Insertion Sort (" << typeid(T).name() << ")" << endl;
+        cout << typeid(T).name() << endl;
         cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << endl << endl;
-        cout << setiosflags(ios::fixed) << setprecision(DOUBLE_PRECISION) << left;
         cout << setw(8) << "steps: " << steps << endl;
         cout << setw(8) << "runs: " << runs << endl << endl;
         cout << setw(15) << "elements" << "| " << setw(15) << "ascending" << "| " << setw(15) << "descending" << "| " << setw(15) << "random" << endl;
@@ -33,7 +32,7 @@ public:
 
                     try {
                         timer.reset();
-                        insertionSort->sortArray(*testArray, 0, sizeOfArray);
+                        sortAlgorithm->sortArray(*testArray, 0, sizeOfArray);
                         measuredTime += timer.elapsed();
                     } catch(exception& ex) {
                         cerr << "Exception: " << ex.what() << " " << endl;
@@ -62,4 +61,4 @@ public:
 
 };
 
-#endif // TESTINSERTIONSORT_H
+#endif // TESTSORTALGORITHM_H

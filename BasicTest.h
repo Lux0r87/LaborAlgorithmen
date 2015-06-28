@@ -3,7 +3,8 @@
 
 #define CACHE_SIZE 20   // in megabytes
 #define DOUBLE_PRECISION 8
-#define INSERTION_SORT 1
+#define INSERTION_SORT 0
+#define MERGESORT 1
 
 //#define ARRAY_SIZE  1000
 //#define ARRAY_SIZE  2000
@@ -20,6 +21,7 @@
 
 using namespace std;
 
+
 class BasicTest {
 
 private:
@@ -27,6 +29,7 @@ private:
 
     // INTEGER:
     // uniform distribution
+    //array<int, 8> exampleArray { {5, 3, 1, 6, 4, 0, 2, 7} };
     //array<int, 10> exampleArray { {9, 5, 3, 1, 6, 4, 0, 8, 2, 7} };
     array<int, 20> exampleArray { {1, 9, 3, 2, 6, 4, 6, 8, 5, 3, 6, 8, 5, 6, 9, 2, 1, 7, 0, 4} };
     // left shifted
@@ -212,6 +215,21 @@ public:
             fillArray(myArray);
             print(myArray);
             insertionSort_v3.sortArray(myArray);
+            print(myArray);
+            if(!isAscending(myArray)) {
+                cout << "Not ascending!" << endl;
+            }
+            cout << endl;
+        }
+        #endif
+
+        #if MERGESORT
+        {
+            cout << "Mergesort - Buttom-up" << endl;
+            Mergesort_BU mergesort_BU;
+            fillArray(myArray);
+            print(myArray);
+            mergesort_BU.sortArray(myArray);
             print(myArray);
             if(!isAscending(myArray)) {
                 cout << "Not ascending!" << endl;
