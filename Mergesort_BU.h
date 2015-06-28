@@ -1,6 +1,10 @@
 #ifndef MERGESORT_BU_H
 #define MERGESORT_BU_H
 
+#ifndef MERGER_H
+#include "Merger.h"
+#endif
+
 using namespace std;
 
 
@@ -24,7 +28,7 @@ protected:
         unique_ptr<array<T, n>> aux = make_unique <array<T, n>>();
 
         for (size_t sz = 1; sz < n; sz = sz + sz) {             // sz: subarray size
-            cout << "sz: " << setw(5) << sz << endl;
+            //cout << "sz: " << setw(5) << sz << endl;
             for (size_t lo = 0; lo < n - sz; lo += sz + sz) {   // lo: subarray index
                 mergeArrays(a, *aux, lo, lo + sz - 1, min(lo + sz + sz - 1, n - 1));
             }

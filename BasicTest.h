@@ -25,13 +25,14 @@ using namespace std;
 class BasicTest {
 
 private:
-    array<int, 20> myArray;
+    array<int, 8> myArray;
 
     // INTEGER:
     // uniform distribution
     //array<int, 8> exampleArray { {5, 3, 1, 6, 4, 0, 2, 7} };
+    array<int, 8> exampleArray { {3, 5, 1, 6, 4, 0, 2, 7} };
     //array<int, 10> exampleArray { {9, 5, 3, 1, 6, 4, 0, 8, 2, 7} };
-    array<int, 20> exampleArray { {1, 9, 3, 2, 6, 4, 6, 8, 5, 3, 6, 8, 5, 6, 9, 2, 1, 7, 0, 4} };
+    //array<int, 20> exampleArray { {1, 9, 3, 2, 6, 4, 6, 8, 5, 3, 6, 8, 5, 6, 9, 2, 1, 7, 0, 4} };
     // left shifted
     //array<int, 20> exampleArray { {4, 7, 1, 0, 5, 0, 1, 0, 0, 1, 4, 2, 0, 0, 2, 2, 2, 2, 5, 3} };
     // right shifted
@@ -225,11 +226,22 @@ public:
 
         #if MERGESORT
         {
-            cout << "Mergesort - Buttom-up" << endl;
+            cout << "Mergesort: Buttom-up" << endl;
             Mergesort_BU mergesort_BU;
             fillArray(myArray);
             print(myArray);
             mergesort_BU.sortArray(myArray);
+            print(myArray);
+            if(!isAscending(myArray)) {
+                cout << "Not ascending!" << endl;
+            }
+            cout << endl;
+
+            cout << "Mergesort: Natural" << endl;
+            Mergesort_Natural mergesort_Natural;
+            fillArray(myArray);
+            print(myArray);
+            mergesort_Natural.sortArray(myArray);
             print(myArray);
             if(!isAscending(myArray)) {
                 cout << "Not ascending!" << endl;

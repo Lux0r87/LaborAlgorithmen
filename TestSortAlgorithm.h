@@ -16,8 +16,8 @@ public:
 
         cout << typeid(T).name() << endl;
         cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << endl << endl;
-        cout << setw(8) << "steps: " << steps << endl;
-        cout << setw(8) << "runs: " << runs << endl << endl;
+        cout << "steps: " << setw(3) << steps << endl;
+        cout << "runs: " << setw(4) << runs << endl << endl;
         cout << setw(15) << "elements" << "| " << setw(15) << "ascending" << "| " << setw(15) << "descending" << "| " << setw(15) << "random" << endl;
         cout << "-------------------------------------------------------------" << endl;
 

@@ -12,16 +12,16 @@
 #include "InsertionSort_v1.h"
 #include "InsertionSort_v2.h"
 #include "InsertionSort_v3.h"
-#include "Merger.h"
 #include "Mergesort_BU.h"
+#include "Mergesort_Natural.h"
 #include "Timer.h"
 
 #include "BasicTest.h"
 #include "TestSortAlgorithm.h"
 
-#define BASIC_TEST 1
+#define BASIC_TEST 0
 #define INSERTION_SORT_TEST 0
-#define MERGESORT_TEST 0
+#define MERGESORT_TEST 1
 
 using namespace std;
 
@@ -48,13 +48,13 @@ int main() {
     #endif // INSERTION_SORT_TEST
 
     #if MERGESORT_TEST
-        maxSteps = 6;
-        startSize = 500;
+        maxSteps = 10;
+        startSize = 16000;
 
         unique_ptr<TestSortAlgorithm> testMergesort = make_unique <TestSortAlgorithm>();
         freopen("Mergesort.txt", "w", stdout);
         testMergesort->measureTime<Mergesort_BU>(startSize, maxSteps, runs);
-        //testMergesort->measureTime<InsertionSort_v2>(startSize, maxSteps, runs);
+        testMergesort->measureTime<Mergesort_Natural>(startSize, maxSteps, runs);
     #endif // MERGESORT_TEST
 
     return 0;
