@@ -18,12 +18,12 @@ public:
 
     template <typename T, size_t n>
     void sortArray(array<T, n> &a, size_t left, size_t right) {
-        runSortAlgorithm(a, left, right);
+        mergeSort_Natural(a, left, right);
     }
 
 protected:
     template <typename T, size_t n>
-    void runSortAlgorithm(array<T, n> &a, size_t left, size_t right) {
+    void mergeSort_Natural(array<T, n> &a, size_t left, size_t right) {
         bool sorted = false;
         size_t leftBound = left;
         size_t rightBound = right;

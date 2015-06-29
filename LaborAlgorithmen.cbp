@@ -42,6 +42,10 @@
 		<Unit filename="InsertionSort_v3.h" />
 		<Unit filename="Merger.h" />
 		<Unit filename="Mergesort_BU.h" />
+		<Unit filename="Mergesort_Natural.h" />
+		<Unit filename="Quicksort_3WayPartitioning.h" />
+		<Unit filename="Quicksort_Hybrid1.h" />
+		<Unit filename="Quicksort_Hybrid2.h" />
 		<Unit filename="TestSortAlgorithm.h" />
 		<Unit filename="Timer.h" />
 		<Unit filename="main.cpp" />

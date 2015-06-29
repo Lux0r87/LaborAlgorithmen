@@ -1,8 +1,12 @@
-Mergesort: Buttom-up
-3 5 1 6 4 0 2 7 
+Quicksort: 3-way partitioning
+5 3 1 6 4 0 2 7 
 0 1 2 3 4 5 6 7 
 
-Mergesort: Natural
-3 5 1 6 4 0 2 7 
+Quicksort: Hybrid 1
+5 3 1 6 4 0 2 7 
+0 1 2 3 4 5 6 7 
+
+Quicksort: Hybrid 2
+5 3 1 6 4 0 2 7 
 0 1 2 3 4 5 6 7 
 

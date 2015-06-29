@@ -14,14 +14,18 @@
 #include "InsertionSort_v3.h"
 #include "Mergesort_BU.h"
 #include "Mergesort_Natural.h"
+#include "Quicksort_3WayPartitioning.h"
+#include "Quicksort_Hybrid1.h"
+#include "Quicksort_Hybrid2.h"
 #include "Timer.h"
 
 #include "BasicTest.h"
 #include "TestSortAlgorithm.h"
 
-#define BASIC_TEST 0
+#define BASIC_TEST 1
 #define INSERTION_SORT_TEST 0
-#define MERGESORT_TEST 1
+#define MERGESORT_TEST 0
+#define QUICKSORT_TEST 1
 
 using namespace std;
 
@@ -56,6 +60,17 @@ int main() {
         testMergesort->measureTime<Mergesort_BU>(startSize, maxSteps, runs);
         testMergesort->measureTime<Mergesort_Natural>(startSize, maxSteps, runs);
     #endif // MERGESORT_TEST
+
+    #if QUICKSORT_TEST
+        maxSteps = 1;
+        startSize = 64000;
+
+        unique_ptr<TestSortAlgorithm> testQuicksort = make_unique <TestSortAlgorithm>();
+        freopen("Quicksort.txt", "w", stdout);
+        testQuicksort->measureTime<Quicksort_3WayPartitioning>(startSize, maxSteps, runs);
+        testQuicksort->measureTime<Quicksort_Hybrid1>(startSize, maxSteps, runs);
+        testQuicksort->measureTime<Quicksort_Hybrid2>(startSize, maxSteps, runs);
+    #endif // QUICKSORT_TEST
 
     return 0;
 }

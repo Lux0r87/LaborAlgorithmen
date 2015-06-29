@@ -18,12 +18,12 @@ public:
 
     template <typename T, size_t n>
     void sortArray(array<T, n> &a, size_t left, size_t right) {
-        runSortAlgorithm(a);
+        mergeSort_BU(a);
     }
 
 protected:
     template <typename T, size_t n>
-    void runSortAlgorithm(array<T, n> &a) {
+    void mergeSort_BU(array<T, n> &a) {
         // Do lg N passes of pairwise merges.
         unique_ptr<array<T, n>> aux = make_unique <array<T, n>>();
 

@@ -13,12 +13,12 @@ public:
 
     template <typename T, size_t n>
     void sortArray(array<T, n> &a, size_t left, size_t right) {
-        runSortAlgorithm(a, left, right);
+        insertionSort(a, left, right);
     }
 
 protected:
     template <typename T, size_t n>
-    void runSortAlgorithm(array<T, n> &a, size_t left, size_t right) {
+    void insertionSort(array<T, n> &a, size_t left, size_t right) {
         // Iterate over the elements from left to right
         for (size_t i = left + 1; i <= right; i++) {
             // Save current position

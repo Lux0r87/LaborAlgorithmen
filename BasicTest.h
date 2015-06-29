@@ -4,7 +4,8 @@
 #define CACHE_SIZE 20   // in megabytes
 #define DOUBLE_PRECISION 8
 #define INSERTION_SORT 0
-#define MERGESORT 1
+#define MERGESORT 0
+#define QUICKSORT 1
 
 //#define ARRAY_SIZE  1000
 //#define ARRAY_SIZE  2000
@@ -12,9 +13,9 @@
 //#define ARRAY_SIZE  8000
 //#define ARRAY_SIZE  10000
 //#define ARRAY_SIZE 100000
-#define ARRAY_SIZE 10240000
+//#define ARRAY_SIZE 10240000
 //#define ARRAY_SIZE 20480000
-//#define ARRAY_SIZE 40960000
+#define ARRAY_SIZE 40960000
 //#define ARRAY_SIZE 81920000
 //#define ARRAY_SIZE 163840000
 //#define ARRAY_SIZE 327680000
@@ -25,16 +26,19 @@ using namespace std;
 class BasicTest {
 
 private:
-    array<int, 8> myArray;
 
     // INTEGER:
+    array<int, 8> myArray;
+
     // uniform distribution
-    //array<int, 8> exampleArray { {5, 3, 1, 6, 4, 0, 2, 7} };
-    array<int, 8> exampleArray { {3, 5, 1, 6, 4, 0, 2, 7} };
+    array<int, 8> exampleArray { {5, 3, 1, 6, 4, 0, 2, 7} };
+    //array<int, 8> exampleArray { {3, 5, 1, 6, 4, 0, 2, 7} };
     //array<int, 10> exampleArray { {9, 5, 3, 1, 6, 4, 0, 8, 2, 7} };
     //array<int, 20> exampleArray { {1, 9, 3, 2, 6, 4, 6, 8, 5, 3, 6, 8, 5, 6, 9, 2, 1, 7, 0, 4} };
+
     // left shifted
     //array<int, 20> exampleArray { {4, 7, 1, 0, 5, 0, 1, 0, 0, 1, 4, 2, 0, 0, 2, 2, 2, 2, 5, 3} };
+
     // right shifted
     //array<int, 20> exampleArray { {6, 6, 5, 4, 5, 9, 0, 9, 6, 7, 8, 2, 2, 9, 9, 9, 0, 9, 4, 5} };
 
@@ -45,10 +49,14 @@ private:
     //array<int, 20> exampleArray { {9, 9, 8, 8, 7, 7, 6, 6, 5, 5, 4, 4, 3, 3, 2, 2, 1, 1, 0, 0} };
 
     // DOUBLE:
+    //array<double, 20> myArray;
+
     // uniform distribution
     //array<double, 20> exampleArray { {7.6, 8.0, 0.8, 2.2, 4.0, 0.2, 1.4, 8.1, 3.4, 6.0, 7.4, 3.1, 8.3, 6.8, 6.0, 1.8, 6.6, 6.9, 5.4, 8.5} };
+
     // left shifted
     //array<double, 20> exampleArray { {1.5, 1.3, 7.5, 5.6, 8.4, 2.5, 2.7, 7.8, 4.8, 8.4, 0.7, 0.0, 4.3, 3.0, 5.3, 6.8, 7.7, 7.8, 4.0, 0.1} };
+
     // right shifted
     //array<double, 20> exampleArray { {6.3, 1.2, 9.0, 2.2, 2.9, 8.9, 5.4, 1.2, 3.2, 7.4, 7.3, 0.4, 4.6, 8.2, 7.5, 9.0, 9.0, 4.6, 3.6, 2.9} };
 
@@ -59,14 +67,17 @@ private:
     //array<double, 20> exampleArray { {9.0, 9.0, 8.0, 8.0, 7.0, 7.0, 6.0, 6.0, 5.0, 5.0, 4.0, 4.0, 3.0, 3.0, 2.0, 2.0, 1.0, 1.0, 0.0, 0.0} };
 
     // BOOLEAN
+    //array<bool, 20> myArray;
     //array<bool, 20> exampleArray { {true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false} };
     //array<bool, 20> exampleArray { {true, true, false, false, true, true, false, false, true, true, false, false, true, true, false, false, true, true, false, false} };
     //array<bool, 20> exampleArray { {false, true, false, true, false, true, true, false, false, false, true, false, false, true, false, true, true, true, false, true} };
 
     // CHARACTER
+    //array<char, 20> myArray;
     //array<char, 20> exampleArray { {'r', 'A', 'u', 'i', 'P', 'y', 'q', 'F', 'i', 'd', 'K', 'F', 'v', 'h', 't', 'M', 'z', 'g', 'E', 'c'} };
 
     // STRING
+    //array<string, 20> myArray;
     //array<string, 20> exampleArray { {"r", "A", "u", "i", "P", "y", "q", "F", "i", "d", "K", "F", "v", "h", "t", "M", "z", "g", "E", "c"} };
 
 public:
@@ -222,7 +233,7 @@ public:
             }
             cout << endl;
         }
-        #endif
+        #endif // INSERTION_SORT
 
         #if MERGESORT
         {
@@ -248,7 +259,44 @@ public:
             }
             cout << endl;
         }
-        #endif
+        #endif // MERGESORT
+
+        #if QUICKSORT
+        {
+            cout << "Quicksort: 3-way partitioning" << endl;
+            Quicksort_3WayPartitioning quicksort_3wp;
+            fillArray(myArray);
+            print(myArray);
+            quicksort_3wp.sortArray(myArray);
+            print(myArray);
+            if(!isAscending(myArray)) {
+                cout << "Not ascending!" << endl;
+            }
+            cout << endl;
+
+            cout << "Quicksort: Hybrid 1" << endl;
+            Quicksort_Hybrid1 quicksort_hybrid1;
+            fillArray(myArray);
+            print(myArray);
+            quicksort_hybrid1.sortArray(myArray);
+            print(myArray);
+            if(!isAscending(myArray)) {
+                cout << "Not ascending!" << endl;
+            }
+            cout << endl;
+
+            cout << "Quicksort: Hybrid 2" << endl;
+            Quicksort_Hybrid2 quicksort_hybrid2;
+            fillArray(myArray);
+            print(myArray);
+            quicksort_hybrid2.sortArray(myArray);
+            print(myArray);
+            if(!isAscending(myArray)) {
+                cout << "Not ascending!" << endl;
+            }
+            cout << endl;
+        }
+        #endif // QUICKSORT
     }
 
 };
