@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1435603325 source:d:\dev\github\laboralgorithmen\main.cpp
+1435714106 source:d:\dev\github\laboralgorithmen\main.cpp
 	<iostream>
 	<array>
 	<chrono>
@@ -18,6 +18,8 @@
 	"Quicksort_3WayPartitioning.h"
 	"Quicksort_Hybrid1.h"
 	"Quicksort_Hybrid2.h"
+	"Heapsort.h"
+	"Heapsort_BU.h"
 	"Timer.h"
 	"BasicTest.h"
 	"TestSortAlgorithm.h"
@@ -32,29 +34,33 @@
 
 1429555242 d:\dev\github\laboralgorithmen\timer.h
 
-1435603399 d:\dev\github\laboralgorithmen\basictest.h
+1435703340 d:\dev\github\laboralgorithmen\basictest.h
 
 1435404654 d:\dev\github\laboralgorithmen\testinsertionsort.h
 
-1435591033 d:\dev\github\laboralgorithmen\mergesort_bu.h
+1435702446 d:\dev\github\laboralgorithmen\mergesort_bu.h
 	"Merger.h"
 
 1435414081 d:\dev\github\laboralgorithmen\testmergesort.h
 
 1435521610 d:\dev\github\laboralgorithmen\merger.h
 
-1435489991 d:\dev\github\laboralgorithmen\testsortalgorithm.h
+1435606100 d:\dev\github\laboralgorithmen\testsortalgorithm.h
 
-1435591055 d:\dev\github\laboralgorithmen\mergesort_natural.h
+1435702468 d:\dev\github\laboralgorithmen\mergesort_natural.h
 	"Merger.h"
 
 1435592565 d:\dev\github\laboralgorithmen\quicksort_3waypartitioning.h
 
-1435593069 d:\dev\github\laboralgorithmen\quicksort_hybrid1.h
+1435694005 d:\dev\github\laboralgorithmen\quicksort_hybrid1.h
 	"InsertionSort_v1.h"
 	"Merger.h"
 
-1435593764 d:\dev\github\laboralgorithmen\quicksort_hybrid2.h
+1435694079 d:\dev\github\laboralgorithmen\quicksort_hybrid2.h
 	"InsertionSort_v1.h"
 	"Merger.h"
+
+1435714453 d:\dev\github\laboralgorithmen\heapsort.h
+
+1435704408 d:\dev\github\laboralgorithmen\heapsort_bu.h
 

@@ -78,7 +78,10 @@ public:
 			swap(a[i], a[k]);
 		}
 
-		if (((i - left) >= (right - j) * 10) || ((right - j) >= (i - left) * 10)) {
+		long leftLength = i - left;
+        long rightLength = right - j;
+
+		if ((leftLength >= (rightLength * 10)) || (rightLength >= (leftLength * 10))) {
 			size_t middle = left + ((right - left) / 2);
 			quicksort(a, left, middle);
 			quicksort(a, middle + 1, right);

@@ -17,6 +17,8 @@
 #include "Quicksort_3WayPartitioning.h"
 #include "Quicksort_Hybrid1.h"
 #include "Quicksort_Hybrid2.h"
+#include "Heapsort.h"
+#include "Heapsort_BU.h"
 #include "Timer.h"
 
 #include "BasicTest.h"
@@ -25,7 +27,8 @@
 #define BASIC_TEST 1
 #define INSERTION_SORT_TEST 0
 #define MERGESORT_TEST 0
-#define QUICKSORT_TEST 1
+#define QUICKSORT_TEST 0
+#define HEAPSORT_TEST 1
 
 using namespace std;
 
@@ -62,8 +65,8 @@ int main() {
     #endif // MERGESORT_TEST
 
     #if QUICKSORT_TEST
-        maxSteps = 1;
-        startSize = 64000;
+        maxSteps = 3;
+        startSize = 1000;
 
         unique_ptr<TestSortAlgorithm> testQuicksort = make_unique <TestSortAlgorithm>();
         freopen("Quicksort.txt", "w", stdout);
@@ -71,6 +74,16 @@ int main() {
         testQuicksort->measureTime<Quicksort_Hybrid1>(startSize, maxSteps, runs);
         testQuicksort->measureTime<Quicksort_Hybrid2>(startSize, maxSteps, runs);
     #endif // QUICKSORT_TEST
+
+    #if HEAPSORT_TEST
+        maxSteps = 10;
+        startSize = 16000;
+
+        unique_ptr<TestSortAlgorithm> testHeapsort = make_unique <TestSortAlgorithm>();
+        freopen("Heapsort.txt", "w", stdout);
+        testHeapsort->measureTime<Heapsort>(startSize, maxSteps, runs);
+        //testHeapsort->measureTime<Heapsort_BU>(startSize, maxSteps, runs);
+    #endif // HEAPSORT_TEST
 
     return 0;
 }

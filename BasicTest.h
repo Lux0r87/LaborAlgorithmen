@@ -5,7 +5,8 @@
 #define DOUBLE_PRECISION 8
 #define INSERTION_SORT 0
 #define MERGESORT 0
-#define QUICKSORT 1
+#define QUICKSORT 0
+#define HEAPSORT 1
 
 //#define ARRAY_SIZE  1000
 //#define ARRAY_SIZE  2000
@@ -297,6 +298,32 @@ public:
             cout << endl;
         }
         #endif // QUICKSORT
+
+        #if HEAPSORT
+        {
+            cout << "Heapsort" << endl;
+            Heapsort heapsort;
+            fillArray(myArray);
+            print(myArray);
+            heapsort.sortArray(myArray);
+            print(myArray);
+            if(!isAscending(myArray)) {
+                cout << "Not ascending!" << endl;
+            }
+            cout << endl;
+
+            cout << "Heapsort: Buttom-up" << endl;
+            Heapsort_BU heapsort_BU;
+            fillArray(myArray);
+            print(myArray);
+            heapsort_BU.sortArray(myArray);
+            print(myArray);
+            if(!isAscending(myArray)) {
+                cout << "Not ascending!" << endl;
+            }
+            cout << endl;
+        }
+        #endif // HEAPSORT
     }
 
 };
