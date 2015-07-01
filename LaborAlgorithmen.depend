@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1435714106 source:d:\dev\github\laboralgorithmen\main.cpp
+1435733668 source:d:\dev\github\laboralgorithmen\main.cpp
 	<iostream>
 	<array>
 	<chrono>
@@ -20,6 +20,7 @@
 	"Quicksort_Hybrid2.h"
 	"Heapsort.h"
 	"Heapsort_BU.h"
+	"Heapsort_BU_v2.h"
 	"Timer.h"
 	"BasicTest.h"
 	"TestSortAlgorithm.h"
@@ -34,7 +35,7 @@
 
 1429555242 d:\dev\github\laboralgorithmen\timer.h
 
-1435703340 d:\dev\github\laboralgorithmen\basictest.h
+1435732566 d:\dev\github\laboralgorithmen\basictest.h
 
 1435404654 d:\dev\github\laboralgorithmen\testinsertionsort.h
 
@@ -60,7 +61,9 @@
 	"InsertionSort_v1.h"
 	"Merger.h"
 
-1435714453 d:\dev\github\laboralgorithmen\heapsort.h
+1435716109 d:\dev\github\laboralgorithmen\heapsort.h
 
 1435704408 d:\dev\github\laboralgorithmen\heapsort_bu.h
+
+1435734025 d:\dev\github\laboralgorithmen\heapsort_bu_v2.h
 

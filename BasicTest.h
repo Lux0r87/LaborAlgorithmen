@@ -322,6 +322,17 @@ public:
                 cout << "Not ascending!" << endl;
             }
             cout << endl;
+
+            cout << "Heapsort: Buttom-up v2" << endl;
+            Heapsort_BU_v2 heapsort_BU_v2;
+            fillArray(myArray);
+            print(myArray);
+            heapsort_BU_v2.sortArray(myArray);
+            print(myArray);
+            if(!isAscending(myArray)) {
+                cout << "Not ascending!" << endl;
+            }
+            cout << endl;
         }
         #endif // HEAPSORT
     }

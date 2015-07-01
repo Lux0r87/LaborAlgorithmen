@@ -6,3 +6,6 @@ Heapsort: Buttom-up
 5 3 1 6 4 0 2 7 
 0 1 2 3 4 5 6 7 
 
+Heapsort: Buttom-up v2
+5 3 1 6 4 0 2 7 
+5 3 1 6 4 0 2 7 

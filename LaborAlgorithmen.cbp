@@ -36,6 +36,9 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="BasicTest.h" />
+		<Unit filename="Heapsort.h" />
+		<Unit filename="Heapsort_BU.h" />
+		<Unit filename="Heapsort_BU_v2.h" />
 		<Unit filename="InsertionSort.h" />
 		<Unit filename="InsertionSort_v1.h" />
 		<Unit filename="InsertionSort_v2.h" />

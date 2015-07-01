@@ -19,6 +19,7 @@
 #include "Quicksort_Hybrid2.h"
 #include "Heapsort.h"
 #include "Heapsort_BU.h"
+#include "Heapsort_BU_v2.h"
 #include "Timer.h"
 
 #include "BasicTest.h"
@@ -28,7 +29,7 @@
 #define INSERTION_SORT_TEST 0
 #define MERGESORT_TEST 0
 #define QUICKSORT_TEST 0
-#define HEAPSORT_TEST 1
+#define HEAPSORT_TEST 0
 
 using namespace std;
 
@@ -83,6 +84,7 @@ int main() {
         freopen("Heapsort.txt", "w", stdout);
         testHeapsort->measureTime<Heapsort>(startSize, maxSteps, runs);
         //testHeapsort->measureTime<Heapsort_BU>(startSize, maxSteps, runs);
+        //testHeapsort->measureTime<Heapsort_BU_v2>(startSize, maxSteps, runs);
     #endif // HEAPSORT_TEST
 
     return 0;
