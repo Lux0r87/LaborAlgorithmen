@@ -4,19 +4,29 @@
 #define CACHE_SIZE 20   // in megabytes
 #define DOUBLE_PRECISION 8
 #define INSERTION_SORT 0
-#define MERGESORT 1
+#define MERGESORT 0
 #define QUICKSORT 0
 #define HEAPSORT 1
 
-//#define ARRAY_SIZE  1000
-//#define ARRAY_SIZE  2000
-//#define ARRAY_SIZE  4000
-//#define ARRAY_SIZE  8000
-//#define ARRAY_SIZE  10000
-//#define ARRAY_SIZE 100000
+//#define ARRAY_SIZE     1000
+//#define ARRAY_SIZE     2000
+//#define ARRAY_SIZE     4000
+//#define ARRAY_SIZE     8000
+//#define ARRAY_SIZE    10000
+//#define ARRAY_SIZE    16000
+//#define ARRAY_SIZE    32000
+//#define ARRAY_SIZE    64000
+//#define ARRAY_SIZE   100000
+//#define ARRAY_SIZE   128000
+//#define ARRAY_SIZE   256000
+//#define ARRAY_SIZE   512000
+//#define ARRAY_SIZE   1024000
+//#define ARRAY_SIZE   2048000
+//#define ARRAY_SIZE   4096000
+#define ARRAY_SIZE   8192000
 //#define ARRAY_SIZE 10240000
 //#define ARRAY_SIZE 20480000
-#define ARRAY_SIZE 40960000
+//#define ARRAY_SIZE 40960000
 //#define ARRAY_SIZE 81920000
 //#define ARRAY_SIZE 163840000
 //#define ARRAY_SIZE 327680000
@@ -312,7 +322,7 @@ public:
             }
             cout << endl;
 
-            cout << "Heapsort: Buttom-up" << endl;
+            /*cout << "Heapsort: Buttom-up" << endl;
             Heapsort_BU heapsort_BU;
             fillArray(myArray);
             print(myArray);
@@ -332,7 +342,7 @@ public:
             if(!isAscending(myArray)) {
                 cout << "Not ascending!" << endl;
             }
-            cout << endl;
+            cout << endl;*/
         }
         #endif // HEAPSORT
     }

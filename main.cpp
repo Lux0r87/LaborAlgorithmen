@@ -25,11 +25,11 @@
 #include "BasicTest.h"
 #include "TestSortAlgorithm.h"
 
-#define BASIC_TEST 1
+#define BASIC_TEST 0
 #define INSERTION_SORT_TEST 0
 #define MERGESORT_TEST 0
 #define QUICKSORT_TEST 0
-#define HEAPSORT_TEST 0
+#define HEAPSORT_TEST 1
 
 using namespace std;
 
@@ -77,8 +77,8 @@ int main() {
     #endif // QUICKSORT_TEST
 
     #if HEAPSORT_TEST
-        maxSteps = 10;
-        startSize = 16000;
+        maxSteps = 1;
+        startSize = 8192000;
 
         unique_ptr<TestSortAlgorithm> testHeapsort = make_unique <TestSortAlgorithm>();
         freopen("Heapsort.txt", "w", stdout);

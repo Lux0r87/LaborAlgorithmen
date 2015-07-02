@@ -20,11 +20,12 @@ public:
     }
 
 protected:
-    template<typename T>
-    void maxHeapify(T *a, size_t rootIndex, size_t n) {
+    template <typename T, size_t n>
+    void maxHeapify(array<T, n> &a, size_t rootIndex, size_t lastIndex) {
         size_t childIndex = 2*rootIndex+1;
-        while (childIndex <= n) {
-            if (childIndex < n && a[childIndex+1] > a[childIndex]) {
+
+        while (childIndex <= lastIndex) {
+            if (childIndex < lastIndex && a[childIndex+1] > a[childIndex]) {
                 childIndex++;
             }
 
@@ -37,25 +38,29 @@ protected:
         }
     }
 
-    template<typename T>
-    void sortHeap(T *a, size_t lastIndex) {
+    template <typename T, size_t n>
+    void sortHeap(array<T, n> &a, size_t lastIndex) {
         for (size_t i = lastIndex; i >= 1;) {
             swap(a[0], a[i--]);
             maxHeapify(a, 0, i);
         }
     }
 
-    template<typename T>
-    void buildMaxHeap(T *a, size_t lastIndex) {
+    template <typename T, size_t n>
+    void buildMaxHeap(array<T, n> &a, size_t lastIndex) {
         for(size_t i = (lastIndex-1)/2; i >= 0; i--) {
             maxHeapify(a, i, lastIndex);
+
+            if (i == 0) {
+                break;
+            }
         }
     }
 
     template<typename T, size_t n>
     void heapsort(array<T, n> &a) {
-        buildMaxHeap(&a[0], n-1);
-        sortHeap(&a[0], n-1);
+        buildMaxHeap(a, n-1);
+        sortHeap(a, n-1);
     }
 
     template <typename T, size_t n>

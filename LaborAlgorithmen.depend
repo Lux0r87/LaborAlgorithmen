@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1435741834 source:d:\dev\github\laboralgorithmen\main.cpp
+1435847439 source:d:\dev\github\laboralgorithmen\main.cpp
 	<iostream>
 	<array>
 	<chrono>
@@ -25,45 +25,45 @@
 	"BasicTest.h"
 	"TestSortAlgorithm.h"
 
-1435617333 d:\dev\github\laboralgorithmen\insertionsort.h
+1435590961 d:\dev\github\laboralgorithmen\insertionsort.h
 
-1435617333 d:\dev\github\laboralgorithmen\insertionsort_v1.h
+1435590971 d:\dev\github\laboralgorithmen\insertionsort_v1.h
 
-1435617333 d:\dev\github\laboralgorithmen\insertionsort_v2.h
+1435590979 d:\dev\github\laboralgorithmen\insertionsort_v2.h
 
-1435617333 d:\dev\github\laboralgorithmen\insertionsort_v3.h
+1435590985 d:\dev\github\laboralgorithmen\insertionsort_v3.h
 
-1429669131 d:\dev\github\laboralgorithmen\timer.h
+1429555242 d:\dev\github\laboralgorithmen\timer.h
 
-1435741910 d:\dev\github\laboralgorithmen\basictest.h
+1435847452 d:\dev\github\laboralgorithmen\basictest.h
 
 1435404654 d:\dev\github\laboralgorithmen\testinsertionsort.h
 
-1435734166 d:\dev\github\laboralgorithmen\mergesort_bu.h
+1435702446 d:\dev\github\laboralgorithmen\mergesort_bu.h
 	"Merger.h"
 
 1435414081 d:\dev\github\laboralgorithmen\testmergesort.h
 
-1435617333 d:\dev\github\laboralgorithmen\merger.h
+1435521610 d:\dev\github\laboralgorithmen\merger.h
 
-1435617333 d:\dev\github\laboralgorithmen\testsortalgorithm.h
+1435606100 d:\dev\github\laboralgorithmen\testsortalgorithm.h
 
-1435741812 d:\dev\github\laboralgorithmen\mergesort_natural.h
+1435835047 d:\dev\github\laboralgorithmen\mergesort_natural.h
 	"Merger.h"
 
-1435617333 d:\dev\github\laboralgorithmen\quicksort_3waypartitioning.h
+1435592565 d:\dev\github\laboralgorithmen\quicksort_3waypartitioning.h
 
-1435734166 d:\dev\github\laboralgorithmen\quicksort_hybrid1.h
+1435842540 d:\dev\github\laboralgorithmen\quicksort_hybrid1.h
 	"InsertionSort_v1.h"
 	"Merger.h"
 
-1435734166 d:\dev\github\laboralgorithmen\quicksort_hybrid2.h
+1435694079 d:\dev\github\laboralgorithmen\quicksort_hybrid2.h
 	"InsertionSort_v1.h"
 	"Merger.h"
 
-1435734166 d:\dev\github\laboralgorithmen\heapsort.h
+1435846167 d:\dev\github\laboralgorithmen\heapsort.h
 
-1435734166 d:\dev\github\laboralgorithmen\heapsort_bu.h
+1435704408 d:\dev\github\laboralgorithmen\heapsort_bu.h
 
-1435740902 d:\dev\github\laboralgorithmen\heapsort_bu_v2.h
+1435835047 d:\dev\github\laboralgorithmen\heapsort_bu_v2.h
 
