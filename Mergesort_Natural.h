@@ -38,13 +38,22 @@ protected:
             while (leftBound < rightBound) {
                 l = leftBound;
 
-                while ((l < rightBound) &&  (a[l] <= a[l + 1])) {
+                while ((l < rightBound) && (a[l] <= a[l + 1])) {
                     l++;
                 }
 
                 r = l + 1;
 
-                while (((r == rightBound - 1) || (r < rightBound)) && (a[r] <= a[r + 1])) {
+                /*while (((r == rightBound - 1) || (r < rightBound)) && (a[r] <= a[r + 1])) {
+                    r++;
+                }
+
+                if (r <= rightBound) {
+					mergeArrays(a, *aux, leftBound, l, r);
+                    sorted = false;
+                }*/
+
+                while (((r == rightBound - 1) || (r < rightBound)) && (a[r] >= a[r + 1])) {
                     r++;
                 }
 

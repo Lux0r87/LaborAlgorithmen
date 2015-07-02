@@ -26,21 +26,19 @@ protected:
     /* idea of bottom-up heapsort.                                           */
     /*-----------------------------------------------------------------------*/
     template<typename T, size_t n>
-    static void siftup(array<T, n> &a, int i, int nSize) {
-        int start = i;
+    void siftup(array<T, n> &a, size_t i, size_t nSize) {
+        size_t start = i;
         T x = a[i];
-        int j = i<<1;
-
-        //print(a);
+        size_t j = i<<1;
 
         while (j <= nSize) {
-            if (j < nSize)
-                if (a[j]<a[j+1])
-                    j++;
+            if (j < nSize && a[j] < a[j+1]) {
+                j++;
+            }
 
-                a[i] = a[j];
-                i = j;
-                j = i<<1;
+            a[i] = a[j];
+            i = j;
+            j = i<<1;
         }
 
         j = i>>1;
@@ -50,12 +48,12 @@ protected:
                 a[i] = a[j];
                 i = j;
                 j = i>>1;
-            } else break;
+            } else {
+                break;
+            }
         }
 
         a[i] = x;
-
-        //print(a);
     }   /* End of siftup */
 
     /*----------------------------------------------------------------------*/
@@ -64,14 +62,11 @@ protected:
     /*----------------------------------------------------------------------*/
     template <typename T, size_t n>
     void heapsort_BU_v2(array<T, n> &a) {
-        //print(a);
         /* Build the heap bottom-up, using siftup. */
         //for (size_t k = n>>1; k > 1; k--) {
         for (size_t k = (n-1); k > 0; k--) {
             siftup(a, k, n);
         }
-
-        //print(a);
 
         /* The main loop of sorting follows. The root is swapped with the last  */
         /* leaf after each sift-up. */

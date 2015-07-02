@@ -4,7 +4,7 @@
 #define CACHE_SIZE 20   // in megabytes
 #define DOUBLE_PRECISION 8
 #define INSERTION_SORT 0
-#define MERGESORT 0
+#define MERGESORT 1
 #define QUICKSORT 0
 #define HEAPSORT 1
 
